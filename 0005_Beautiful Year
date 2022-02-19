@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int y;
+    cin>>y;
+    while(1)
+    {
+        y++;
+        int y1=y;
+        int a[4];
+        int i=0;
+        while(y1)
+        {
+            a[i]=y1%10;
+            y1=y1/10;
+            i++;
+        }
+        if(a[0]!=a[1]&&a[0]!=a[2]&&a[0]!=a[3]&&a[1]!=a[2]&&a[1]!=a[3]&&a[2]!=a[3])
+        {
+            break;
+        }
+    }
+    cout<<y<<" ";
+    
+    
+    return 0;
+}
