@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+    vector<int>v;
+    for(int i=0;i<n;i++)
+    {
+        int x;
+        cin>>x;
+        v.push_back(x);
+    }
+    int min=0,max=0;
+    int m1=v[0],m2=v[0];
+    for(int i=1;i<n;i++)
+    {
+        if(m1>=v[i])
+        {
+            m1=v[i];
+            min=i;
+        }
+        if(m2<v[i])
+        {
+            m2=v[i];
+            max=i;
+        }
+        
+    }
+    if(max>min)
+    {
+        int res=(max-1)+abs(n-min)-1;
+        cout<<res;
+    }
+    else
+    {
+        int res=(max-1)+abs(n-min);
+        cout<<res;
+    }
+	return 0;
+}
