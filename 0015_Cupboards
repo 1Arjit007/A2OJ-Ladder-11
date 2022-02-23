@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	cin>>n;
+	int leftZero=0,rightZero=0,leftOne=0,rightOne=0;
+	while(n--)
+	{
+	    int x,y;
+	    cin>>x>>y;
+	    if(x==0)
+	    {
+	        leftZero++;
+	    }
+	    if(x==1)
+	    {
+	        leftOne++;
+	    }
+	    if(y==0)
+	    {
+	        rightZero++;
+	    }
+	    if(y==1)
+	    {
+	        rightOne++;
+	    }
+	    
+	}
+	int ans=0;
+	if(leftZero<=leftOne)
+	{
+	    ans+=leftZero;
+	}
+	else
+	{
+	    ans+=leftOne;
+	}
+	if(rightZero<=rightOne)
+	{
+	    ans+=rightZero;
+	}
+	else
+	{
+	    ans+=rightOne;
+	}
+	cout<<ans<<endl;
+	return 0;
+}
