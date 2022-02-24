@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	// your code goes here
+    int n;
+    cin>>n;
+    int max=0;
+    int cap=0;
+    if(n==1)
+    {
+        int x,y;
+        cin>>x>>y;
+        cap=(x+y);
+        cout<<cap<<endl;
+    }
+    else
+    {
+        int x,y;
+        cin>>x>>y;
+        cap=(x+y);
+        if(cap>max)
+        {
+            max=cap;
+        }
+        while((n-1)>0)
+        {
+            int x,y;
+            cin>>x>>y;
+            cap=cap-x;
+            cap=cap+y;
+            if(cap>max)
+            {
+                max=cap;
+            }
+            n--;
+        }
+        cout<<max;
+    }
+    
+	return 0;
+}
