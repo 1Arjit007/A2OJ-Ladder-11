@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+   map<int,int> mp;
+   long long int sum1=0;
+   long long int sum2=0;
+   int n;
+   cin>>n;
+   for(int i=0;i<n;i++)
+   {
+       int t;
+       cin>>t;
+       mp[t]=i;
+   }
+   int m;
+   cin>>m;
+   for(int i=0;i<m;i++)
+   {
+       int x;
+       cin>>x;
+       sum1+=mp[x]+1;
+       sum2+=n-mp[x];
+   }
+    cout<<sum1<<" "<<sum2<<endl;
+	
+	return 0;
+}
